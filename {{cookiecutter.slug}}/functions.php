@@ -1,0 +1,28 @@
+<?php
+/**
+ * Theme functions and definitions
+ *
+ * @package {{cookiecutter.package}}
+ */
+
+/**
+ * Load child theme css and optional scripts
+ */
+function {{cookiecutter.prefix}}_enqueue_scripts() {
+	wp_enqueue_style( '{{cookiecutter.slug}}-style', get_stylesheet_directory_uri() . '/style.css', array( 'hello-elementor-theme-style' ), '1.0.0' );
+}
+add_action( 'wp_enqueue_scripts', '{{cookiecutter.prefix}}_enqueue_scripts' );
+
+/**
+ * Elementor make widget with classes "clickable" or "fullclick" fully linked.
+ * Widget trigger first link inside on user click.
+ */
+function {{cookiecutter.prefix}}_elementor_widget_full_link() {
+	if ( did_action( 'elementor/loaded' ) && ! \Elementor\Plugin::$instance->preview->is_preview_mode() ) {
+		echo '<style>.clickable,.fullclick{cursor:pointer;}</style>';
+		echo '<script>jQuery(function($){var c=".clickable,.fullclick",d=document,e="click",f=function(){$(d).off(e,c,f);($("a[href]",this)[0]||d.body).click();$(d).on(e,c,f);};$(d).on(e,c,f);});</script>';
+	}
+}
+add_action( 'wp_footer', '{{cookiecutter.prefix}}_elementor_widget_full_link', 100 );
+
+?>

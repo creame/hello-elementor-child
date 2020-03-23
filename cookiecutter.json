@@ -1,0 +1,9 @@
+{
+  "theme_name": "Hello Elementor Child",
+  "theme_uri": "https://github.com/elementor/hello-theme/",
+  "author": "Creame",
+  "author_uri": "https://crea.me/",
+  "package": "{{ cookiecutter.theme_name|replace(' ', '') }}",
+  "slug": "{{ cookiecutter.theme_name|lower|replace(' ', '-') }}",
+  "prefix": "{{ cookiecutter.slug|replace('-', '_') }}"
+}
