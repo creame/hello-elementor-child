@@ -24,5 +24,3 @@ function {{cookiecutter.prefix}}_elementor_widget_full_link() {
 	}
 }
 add_action( 'wp_footer', '{{cookiecutter.prefix}}_elementor_widget_full_link', 100 );
-
-?>
