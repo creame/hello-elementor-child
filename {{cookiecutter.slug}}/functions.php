@@ -24,3 +24,12 @@ function {{cookiecutter.prefix}}_elementor_widget_full_link() {
 	}
 }
 add_action( 'wp_footer', '{{cookiecutter.prefix}}_elementor_widget_full_link', 100 );
+
+/**
+ * Allow HTML in term (category, tag) descriptions
+ */
+remove_filter( 'pre_term_description', 'wp_filter_kses' );
+if ( ! current_user_can( 'unfiltered_html' ) ) {
+    add_filter( 'pre_term_description', 'wp_filter_post_kses' );
+}
+remove_filter( 'term_description', 'wp_kses_data' );
