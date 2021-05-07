@@ -12,3 +12,27 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, featured-images, rtl-language-support, threaded-comments, translation-ready
 */
 
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  overflow-x: hidden !important;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+  background-color: #fff;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--e-global-color-text, #000);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: var(--e-global-color-primary, #000);
+}
+
+[data-elementor-type="header"] {
+  overflow: hidden;
+}
