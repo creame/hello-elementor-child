@@ -36,3 +36,9 @@ body::-webkit-scrollbar-thumb:hover {
 [data-elementor-type="header"] {
   overflow: hidden;
 }
+
+button:focus,
+[type="submit"]:focus,
+[type="button"]:focus {
+  outline: none;
+}
