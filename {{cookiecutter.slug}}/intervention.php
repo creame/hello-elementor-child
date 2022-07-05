@@ -4,11 +4,11 @@ return [
   'application' => [
     'theme' => '{{cookiecutter.slug}}',
     'general' => [
-      // 'site-title' => '{{cookiecutter.slug}}',
-      // 'tagline' => '{{cookiecutter.theme_name}}',
+      // 'site-title' => '{{cookiecutter.theme_name}}',
+      // 'tagline' => 'Otro sitio de WordPress',
       // 'wp-address' => '{{cookiecutter.theme_uri}}/wp',
       // 'site-address' => '{{cookiecutter.theme_uri}}',
-      'admin-email' => 'servicios+{{cookiecutter.slug}}@crea.me',
+      'admin-email' => 'servicios+{{cookiecutter.project}}@crea.me',
       'membership' => false,
       'default-role' => 'subscriber',
       'language' => 'es_ES',
