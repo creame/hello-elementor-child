@@ -72,6 +72,7 @@ return [
       'sizes.large.width' => 1024,
       'sizes.large.height' => 1024,
       'uploads.organize' => true,
+      'mimes.svg' => true, // Allow upload SVGs.
     ],
     'permalinks' => [
       'structure' => '/%postname%/',
