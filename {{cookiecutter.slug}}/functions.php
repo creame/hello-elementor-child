@@ -19,8 +19,10 @@ add_action( 'wp_enqueue_scripts', '{{cookiecutter.prefix}}_enqueue_scripts' );
  */
 function {{cookiecutter.prefix}}_elementor_widget_full_link() {
 	if ( did_action( 'elementor/loaded' ) && ! \Elementor\Plugin::$instance->preview->is_preview_mode() ) {
-		echo '<style>.clickable,.fullclick{cursor:pointer;}</style>';
-		echo '<script>jQuery(function($){var c=".clickable,.fullclick",d=document,e="click",f=function(){$(d).off(e,c,f);($("a[href]",this)[0]||d.body).click();$(d).on(e,c,f);};$(d).on(e,c,f);});</script>';
+		$class = '.clickable,.fullclick';
+
+		echo "<style>$class{cursor:pointer;}</style>";
+		echo "<script>jQuery(function($){var c='$class',d=document,e='click',f=function(){\$(d).off(e,c,f);($('a[href]',this)[0]||d.body).click();$(d).on(e,c,f)};$(d).on(e,c,f)})</script>";
 	}
 }
 add_action( 'wp_footer', '{{cookiecutter.prefix}}_elementor_widget_full_link', 100 );
