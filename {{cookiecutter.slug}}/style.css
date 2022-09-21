@@ -41,3 +41,7 @@ button:focus,
 [type="button"]:focus {
   outline: none;
 }
+
+svg[width="0"] {
+  position: absolute;
+}
