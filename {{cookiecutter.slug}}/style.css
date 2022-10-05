@@ -5,7 +5,7 @@ Description: {{cookiecutter.theme_name}} is a child theme of Hello Elementor
 Author: {{cookiecutter.author}}
 Author URI: {{cookiecutter.author_uri}}
 Template: hello-elementor
-Version: 1.0.1
+Version: 1.1.0
 Text Domain: {{cookiecutter.slug}}
 License: GNU General Public License v3 or later.
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -20,15 +20,15 @@ body {
   overflow-x: hidden !important;
 }
 
-body::-webkit-scrollbar {
+body.scrollbars-visible::-webkit-scrollbar {
   width: 8px;
 }
 
-body::-webkit-scrollbar-thumb {
+body.scrollbars-visible::-webkit-scrollbar-thumb {
   background-color: var(--e-global-color-text, #000);
 }
 
-body::-webkit-scrollbar-thumb:hover {
+body.scrollbars-visible::-webkit-scrollbar-thumb:hover {
   background-color: var(--e-global-color-primary, #000);
 }
 
