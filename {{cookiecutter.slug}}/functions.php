@@ -19,8 +19,7 @@ add_action( 'wp_enqueue_scripts', '{{cookiecutter.prefix}}_enqueue_scripts' );
 function {{cookiecutter.prefix}}_header_script() {
 	$body_class = 'scrollbars-visible';
 
-	echo "<script>!function(d,b){(d=d.createElement('div')).style='width:100px;height:100px;overflow:scroll;position:absolute;top:-1000px;';" .
-		"b.appendChild(d);b.classList.toggle('$body_class',d.offsetWidth-d.clientWidth>0);b.removeChild(d);}(document,document.body);</script>";
+	echo "<script>!function(w,b){b.classList.toggle('$body_class',w.innerWidth>b.clientWidth);}(window,document.body);</script>";
 }
 add_action( 'wp_body_open', '{{cookiecutter.prefix}}_header_script' );
 
