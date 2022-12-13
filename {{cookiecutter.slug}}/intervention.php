@@ -121,6 +121,7 @@ return [
     ],
     'all-not-administrator' => [
       'common.adminbar.updates' => true,
+      'common.adminbar.theme' => true,
     ],
   ],
 ];
