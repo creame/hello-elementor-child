@@ -32,7 +32,7 @@ function {{cookiecutter.prefix}}_elementor_widget_full_link() {
 		$class = '.clickable,.fullclick';
 
 		echo "<style>$class{cursor:pointer;}</style>";
-		echo "<script>jQuery(function($){var c='$class',d=document,e='click',f=function(){\$(d).off(e,c,f);($('a[href]',this)[0]||d.body).click();$(d).on(e,c,f)};$(d).on(e,c,f)})</script>";
+		echo "<script>jQuery(function($){var c='$class',d=document,e='click',f=function(v){\$(v.target).is('a')||$(v.target).closest('a').length||($(d).off(e,c,f),($('a[href]',this)[0]||d.body).click(),$(d).on(e,c,f))};$(d).on(e,c,f)})</script>";
 	}
 }
 add_action( 'wp_footer', '{{cookiecutter.prefix}}_elementor_widget_full_link', 100 );
