@@ -1,5 +1,7 @@
 <?php
 
+$is_woocommerce = false;
+
 // Change footer label
 $email = defined('CREAME_SUPPORT_EMAIL') ? CREAME_SUPPORT_EMAIL : 'i+{{cookiecutter.slug}}@crea.me';
 $label = '<em><strong>Wordpress</strong> optimizado por <strong><a href="https://crea.me" style="' .
@@ -33,7 +35,7 @@ return [
       // 'site-address' => '{{cookiecutter.theme_uri}}',
       'admin-email' => 'servicios+{{cookiecutter.project}}@crea.me',
       'membership' => false,
-      'default-role' => 'subscriber',
+      'default-role' => $is_woocommerce ? 'customer' : 'author',
       'language' => 'es_ES',
       'timezone' => 'Europe/Madrid',
       // 'date-format' => 'j \\d\\e F \\d\\e Y',
