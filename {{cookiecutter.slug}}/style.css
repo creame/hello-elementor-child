@@ -32,10 +32,6 @@ body.scrollbars-visible::-webkit-scrollbar-thumb:hover {
   background-color: var(--e-global-color-primary, #000);
 }
 
-[data-elementor-type="header"] {
-  overflow: hidden;
-}
-
 button:focus,
 [type="submit"]:focus,
 [type="button"]:focus {
